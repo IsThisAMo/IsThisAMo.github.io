@@ -6,17 +6,35 @@
             body {
                 margin: 0;
                 height: 100vh;
+                background-color: rgb(32, 32, 32);
+                position: relative;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 font-family: Arial, sans-serif;
             }
+                /* Navigation links in top-right */
+            .top-right-nav {
+                position: absolute;
+                top: 20px;
+                right: 30px;
+            }
+
+            .top-right-nav a {
+                margin-left: 20px;
+                text-decoration: none;
+                color: #675aec;
+                font-weight: bold;
+            }
+
+            .top-right-nav a:hover {
+                text-decoration: underline;
+            }
             .center-container {
                 text-align: center;
-                background-color: #ffffff;
                 padding: 30px;
+                color: rgb(214, 214, 214);
                 border-radius: 10px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             }
 
             .form {
@@ -28,22 +46,28 @@
             }
             input[type="text"] {
                 padding: 10px;
-                width: 200px;
+                width: 400px;
                 font-size: 16px;
                 margin-right: 10px;
+                border-radius: 25px;
             }
 
-            button {
+            input[type="submit"] {
                 padding: 10px 16px;
                 font-size: 16px;
                 cursor: pointer;
             }
         </style>
-        <title>Search</title>
+        <title>My Search Page</title>
     </head>
     <body>
+          <!-- Top-right navigation links -->
+        <div class="top-right-nav">
+            <a href="https://www.google.com/imghp?hl=en&gl=us" target="_blank">Image Search</a>
+            <a href="https://www.google.com/advanced_search?hl=en&gl=us" target="_blank">Advanced Search</a>
+        </div>
         <div class="center-container">
-            <h2>Google search in English</h2>
+            <h2>Google search in English (location US)</h2>
             <form class="form" action="https://google.com/search">
                 <input type="text" placeholder="Enter something..." name="q" required>
                 <input type="hidden" name="hl" value="en">
