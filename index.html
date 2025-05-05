@@ -1,11 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>
-            My Site
-        </title>
+        <meta charset="UTF-8">
+        <style>
+            body {
+                margin: 0;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: Arial, sans-serif;
+            }
+            .center-container {
+                text-align: center;
+                background-color: #ffffff;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            .form {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+                margin-top: 20px;
+            }
+            input[type="text"] {
+                padding: 10px;
+                width: 200px;
+                font-size: 16px;
+                margin-right: 10px;
+            }
+
+            button {
+                padding: 10px 16px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+        </style>
+        <title>Search</title>
     </head>
     <body>
-        <h1>This is my GitHub site!</h1>
+        <div class="center-container">
+            <h2>Google search in English</h2>
+            <form class="form" action="https://google.com/search">
+                <input type="text" placeholder="Enter something..." name="q" required>
+                <input type="hidden" name="hl" value="en">
+                <input type="hidden" name="gl" value="us"> <!-- Geographic Location -->
+                <input type="submit" value="Google Search">
+            </form>
+        </div>
+
     </body>
 </html>
